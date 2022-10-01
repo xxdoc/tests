@@ -1,0 +1,4 @@
+LIBRARY TEST
+      DESCRIPTION ''
+      EXPORTS
+		 ComFuncAddr
