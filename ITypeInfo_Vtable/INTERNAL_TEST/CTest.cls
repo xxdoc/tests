@@ -14,6 +14,7 @@ Attribute VB_Exposed = False
 Public x
 
 Public Function test(x As Long)
+Attribute test.VB_UserMemId = -3232
     MsgBox x
 End Function
 

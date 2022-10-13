@@ -35,6 +35,11 @@ Private Sub Form_Load()
     'If o Is Nothing Then End
     'addr = ComFuncAddr(ObjPtr(CreateObject("vbSample.CTest")), StrPtr("test"))
     
+    'Dim i As IDispatch 'restricted...
+    'Set i = c
+   '
+    'InputBox "IUnk, IDisp", "", Hex(ObjPtr(c)) & " " & Hex(ObjPtr(i))
+    
     CallByName c, "test", VbMethod, CLng(21)
     End
     
