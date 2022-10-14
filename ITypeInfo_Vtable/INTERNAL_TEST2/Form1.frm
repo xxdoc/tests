@@ -17,24 +17,28 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
-Private Declare Function ComFuncAddr Lib "test.dll" _
-(ByVal obj As Long, ByVal sMethodName As Long) As Long
+Private Declare Function ComFuncAddr Lib "test.dll" ( _
+    ByVal obj As Long, _
+    ByVal sMethodName As Long, _
+    addr As Long, _
+    offset As Long _
+) As Long
 
 Private Sub Form_Load()
-    Dim addr As Long
+    Dim addr As Long, offset As Long, rv As Long
     Dim c As New CTest
     Dim fso As New Scripting.FileSystemObject
     
     'InputBox "Objptr(c) = ", "", Hex(ObjPtr(c))
     
-    addr = ComFuncAddr(ObjPtr(fso), StrPtr("FileExists"))
-    MsgBox "fso.FileExists: " & Hex(addr)
+    rv = ComFuncAddr(ObjPtr(fso), StrPtr("FileExists"), addr, offset)
+    MsgBox "fso.FileExists: vtable[" & Hex(offset) & "] = " & Hex(addr)
     
-    addr = ComFuncAddr(ObjPtr(c), StrPtr("test"))
-    MsgBox "CTest.test: " & Hex(addr)
+    rv = ComFuncAddr(ObjPtr(c), StrPtr("test"), addr, offset)
+    MsgBox "CTest.test: vtable[" & Hex(offset) & "] = " & Hex(addr)
     
-    addr = ComFuncAddr(ObjPtr(Me), StrPtr("FormTest"))
-    MsgBox "Me.FormTest: " & Hex(addr)
+    rv = ComFuncAddr(ObjPtr(Me), StrPtr("FormTest"), addr, offset)
+    MsgBox "Me.FormTest: vtable[" & Hex(offset) & "] = " & Hex(addr)
     End
     
 End Sub

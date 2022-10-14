@@ -46,6 +46,7 @@ Function HookClassMethod(oClassInstance As Object, ByVal IDX_CLASSMETHOD As Long
     
 End Function
 
+'Sub OverrideFunction(ByVal pObjPtr As Long)
 Function OverrideFunction(ByVal pObjPtr As Long) As Long
     MsgBox "Hooked this = " & Hex(pObjPtr)
     OverrideFunction = 0 'S_OK
