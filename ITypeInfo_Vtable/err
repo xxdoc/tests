@@ -1,0 +1,13 @@
+text:6600BA4F                 call    ?FuncSigOfMember@@YG?AW4FuncSigResult@@PAUepiModule@@JGHHPAUepiTinyMethodType@@@Z ; FuncSigOfMember(epiModule *,long,ushort,int,int,epiTinyMethodType *)
+.
+text:6600BAD8                 call    ?CParamsShowing@epiMethodTypeInv@@QAEGXZ ; epiMethodTypeInv::CParamsShowing(void)
+
+.text:6600BBFA                 call    ?VariantVtOfEpiType@@YGJPAUepiType@@PAG@Z ; VariantVtOfEpiType(epiType *,ushort *)
+
+
+.text:6600B88E                 call    ?EpiInvokeMethod@@YGJPAXPAUepiModule@@JGHHPAUtagDISPPARAMS@@PAUtagVARIANT@@PAUtagEXCEPINFO@@PAI@Z ; EpiInvokeMethod(void *,epiModule *,long,ushort,int,int,tagDISPPARAMS *,tagVARIANT *,tagEXCEPINFO *,uint *)
+
+
+.text:6600BB4E                 call    ?EpiGetInvokeArgs@@YGJPAUepiTinyMethodType@@PAUepiModule@@GPAUtagDISPPARAMS@@PAPAUtagVARIANT@@PAXPAPAUINVOKEARGS@@PAIH@Z ; EpiGetInvokeArgs(epiTinyMethodType *,epiModule *,ushort,tagDISPPARAMS *,tagVARIANT * *,void *,INVOKEARGS * *,uint *,int)
+
+.text:6600D898                 call    ?CoerceArg@   ' -->  fails and throws error and returns to after EpiInvokeMethod

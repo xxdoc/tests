@@ -1,0 +1,25 @@
+
+$ ==>    >660EE342  QueryInterface
+$+4      >66041ECC  AddRef 
+$+8      >66041FEA  Release
+$+C      >660C4C6C  GetTypeAttr           ;not implemented
+$+10     >660EE383  GetTypeComp
+$+14     >660EE35B  GetFuncDesc 
+$+18     >660EE3A5  GetVarDesc  
+$+1C     >660EE3B9  GetNames
+$+20     >660EE45E  GetRefTypeOfImplType  ;not implemented
+$+24     >660EE45E  GetImplTypeFlags      ;not implemented
+$+28     >660EE466  GetIDsOfNames
+$+2C     >660EE6BE  Invoke 
+$+30     >66041EFE  GetDocumentation
+$+34     >660AC9F4  GetDllEntry           ;not implemented
+$+38     >660EE6EF  GetRefTypeInfo 
+$+3C     >660ADE66  AddressOfMember       ;not implemented
+$+40     >660ADE66  CreateInstance        ;not implemented
+$+44     >660EE45E  GetMops               ;not implemented
+$+48     >660EE45E  GetContainingTypeLib  ;not implemented
+$+4C     >66038A67  ReleaseTypeAttr
+$+50     >66038A67  ReleaseFuncDesc
+$+54     >66038A67  ReleaseVarDesc
+
+
